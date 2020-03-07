@@ -6,6 +6,10 @@ const Room = () => {
   return (
     <div className="room">
       La chambre est {isLit ? 'disponible' : 'occupée'}
+
+      <button onClick={() => setIsLit(prev => !prev)}>
+        Changer l'état
+      </button>
     </div>
   );
 };
