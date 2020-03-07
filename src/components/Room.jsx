@@ -1,9 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react';
 
 const Room = () => {
-  return (
-    <div className="room">La chambre est disponible</div>
-  );
-}
+  const [isLit, setIsLit] = useState(true);
 
-export default Room
+  return (
+    <div className="room">
+      La chambre est {isLit ? 'disponible' : 'occupée'}
+    </div>
+  );
+};
+
+export default Room;
